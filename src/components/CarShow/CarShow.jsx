@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const CarShow = ({car}) => {
     // console.log(car);
-    const {name, category, price, description, rating, photo} = car;
+    const {_id, name, category, price, rating, photo} = car;
 
     return (
         <div>
@@ -26,7 +27,11 @@ const CarShow = ({car}) => {
                         <p className='text-lg font-semibold text-[#FF444A]'>${price}</p>
                         <p className='text-base font-medium'>{category}</p>
                     </div>
-                    <p><small>{description}</small></p>
+                    <div className='flex justify-center items-center py-5'>
+                        <Link to={`/cars/${_id}`}>
+                        <button className="bg-[#FF444A] text-white py-1 font-semibold hover:bg-black hover:text-white px-8 rounded-full">Details <i className='font-semibold text-base bx bx-right-arrow-alt'></i></button>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>
