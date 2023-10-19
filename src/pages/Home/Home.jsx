@@ -9,7 +9,7 @@ import CarShow from "../../components/CarShow/CarShow";
 const Home = () => {
 
     const cars = useLoaderData();
-    console.log(cars);
+    // console.log(cars);
 
     return (
         <div>

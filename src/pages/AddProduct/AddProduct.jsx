@@ -27,19 +27,21 @@ const AddProduct = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                Swal.fire({
-                    title: 'Success!',
-                    text: 'New Car Added Successfully',
-                    icon: 'success',
-                    confirmButtonText: 'Cool'
-                })
+                if(data.insertedId) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'New Car Added Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                }
             })
         
     };
 
     return (
         <div className="bg-[#F4F3F0] px-4 md:p-10 lg:p-24 py-10">
-            <h2 className="text-3xl font-extrabold mb-5">Add a New Car</h2>
+            <h2 className=" text-base md:text-3xl font-extrabold mb-5">Add a New Car</h2>
             <form onSubmit={handleAddCar}>
                 {/* form Car Name and Category row */}
                 <div className="md:flex gap-5 mb-8">

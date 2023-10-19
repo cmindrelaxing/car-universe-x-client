@@ -1,7 +1,7 @@
 
 const CarBands = () => {
     return (
-        <div className=" py-10 px-2 md:px-5 lg:px-10 xl:px-20">
+        <div className=" py-20 px-2 md:px-5 lg:px-10 xl:px-20">
             <h4 className=" text-center text-lg font-semibold text-[#FF444A] tracking-widest">POPULAR BRANDS</h4>
             <h1 className="text-center mt-5 font-semibold text-3xl md:text-4xl lg:text-6xl mb-5 text-black">
             Our Top Quality <span className="text-[#FF444A]">Brands</span> 

@@ -1,8 +1,43 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
-const MyCarInfo = ({car}) => {
+const MyCarInfo = ({car, cars, setCars}) => {
     // console.log(car);
-    const {name, category, price, description, rating, photo} = car;
+    const {_id, name, category, price, description, rating, photo} = car;
+
+    const handleDelete = _id => {
+        console.log(_id);
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+          }).then((result) => {
+            if (result.isConfirmed) {
+            
+                fetch(`http://localhost:5000/cars/${_id}`, {
+                    method: 'DELETE',
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if(data.deletedCount > 0) {
+                              Swal.fire(
+                                'Deleted!',
+                                'Your Car item has been deleted.',
+                                'success'
+                            )
+                            const remaining = cars?.filter(car => car._id !== _id);
+                            setCars(remaining);
+                        }
+                    })
+            }
+        })
+    };
 
     return (
         <div>
@@ -29,8 +64,10 @@ const MyCarInfo = ({car}) => {
                     <p><small>{description}</small></p>
 
                     <div className='flex justify-between items-center gap-5 my-4'>
+                        <Link to={`/updateProduct/${_id}`}>
                         <button className="text-blue-600 font-bold">Update</button>
-                        <button className="text-blue-600 font-bold">Delete</button>
+                        </Link>
+                        <button onClick={() => handleDelete(_id)} className="text-blue-600 font-bold">Delete</button>
                     </div>
                 </div>
             </div>
@@ -40,6 +77,8 @@ const MyCarInfo = ({car}) => {
 
 MyCarInfo.propTypes = {
     car: PropTypes.any.isRequired,
+    cars: PropTypes.any.isRequired,
+    setCars: PropTypes.any.isRequired,
 };
 
 export default MyCarInfo;

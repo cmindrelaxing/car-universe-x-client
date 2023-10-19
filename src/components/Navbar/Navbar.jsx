@@ -32,6 +32,15 @@ const Navbar = () => {
             >
             About
             </NavLink>
+            
+            <NavLink
+            to="/contact"
+            className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "bg-[#FF444A] text-white py-1 px-7 rounded-tl-xl rounded-br-xl   hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-lg hover:rounded-bl-lg " : " "
+            }
+            >
+            Contact
+            </NavLink>
 
             <NavLink
             to="/addProduct"
@@ -40,15 +49,6 @@ const Navbar = () => {
             }
             >
             Add Product
-            </NavLink>
-
-            <NavLink
-            to="/details"
-            className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "bg-[#FF444A] text-white py-1 px-7 rounded-tl-xl rounded-br-xl   hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-lg hover:rounded-bl-lg " : " "
-            }
-            >
-            Details
             </NavLink>
 
             <NavLink
@@ -84,7 +84,7 @@ const Navbar = () => {
 
     return (
 
-        <div className="navbar bg-base-100  py-4 px-2 md:px-5 lg:px-10 xl:px-20 flex justify-between">
+        <div className="navbar bg-base-100  py-4 px-2 md:px-5 lg:px-10 xl:px-20 flex justify-between ">
             <div className="">
                 <div className="dropdown">
                 <label tabIndex={0} className="btn btn-ghost lg:hidden">

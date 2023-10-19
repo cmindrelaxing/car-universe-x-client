@@ -1,7 +1,7 @@
 
 const CarDealer = () => {
     return (
-        <div className="px-2 md:px-5 lg:px-10 xl:px-20 md:flex md:items-center lg:gap-16 md:gap-7 py-10">
+        <div className="px-2 md:px-5 lg:px-10 xl:px-20 md:flex md:items-center lg:gap-16 md:gap-7 py-20">
             <div>
                 <img src="https://i.ibb.co/8YSCsCC/01.png" alt="" />
             </div>
