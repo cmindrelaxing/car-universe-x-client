@@ -6,7 +6,7 @@ const Logo = () => {
             <Link to={"/"}>
                 <div className="flex items-center gap-3">
                     <div>
-                    <img className="w-12 md:w-16" src="https://i.ibb.co/CvqGgW3/07.png" alt="" />
+                    <img className="w-12 md:w-16" src="https://i.ibb.co/N1grhjr/05.png" alt="" />
                     </div>
                     <div>
                         <p className="text-lg font-bold underline tracking-wide"><span className="text-[#FF444A]">C</span>ar</p>
