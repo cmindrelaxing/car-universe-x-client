@@ -65,9 +65,9 @@ const MyCarInfo = ({car, cars, setCars}) => {
 
                     <div className='flex justify-between items-center gap-5 my-4'>
                         <Link to={`/updateProduct/${_id}`}>
-                        <button className="text-blue-600 font-bold">Update</button>
+                        <button className="text-blue-600 font-bold hover:text-red-500">Update</button>
                         </Link>
-                        <button onClick={() => handleDelete(_id)} className="text-blue-600 font-bold">Delete</button>
+                        <button onClick={() => handleDelete(_id)} className="text-blue-600 font-bold hover:text-red-500">Delete</button>
                     </div>
                 </div>
             </div>
