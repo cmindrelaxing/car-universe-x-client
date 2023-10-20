@@ -11,7 +11,7 @@ const LoginPage = () => {
     const {signIn, googleLogin, githubLogin} = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
-    console.log('Location in the login page', location);
+    // console.log('Location in the login page', location);
 
     const loginBtn = e => {
         e.preventDefault();

@@ -37,15 +37,29 @@ const AuthProvider = ({children}) => {
         return createUserWithEmailAndPassword(auth, email, password);
     };
 
-    const signIn = (email, password) => {
+    const signIn = async (email, password) => {
         setLoading(true);
-        signInWithEmailAndPassword(auth, email, password);
+    
+        try {
+            const userCredential = await signInWithEmailAndPassword(auth, email, password);
+            console.log(userCredential);
+
+            const user = userCredential.user;
+            console.log(user);
+
+            setLoading(false);
+            return user;
+        } catch (error) {
+            
+            setLoading(false);
+            throw error; 
+        }
     };
 
 
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
-            console.log('user in the auth state', currentUser);
+            // console.log('user in the auth state', currentUser);
             setUser(currentUser);
             setLoading(false);
         })
