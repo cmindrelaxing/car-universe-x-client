@@ -1,12 +1,12 @@
 
 const ContactForm = () => {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 px-4 md:p-10 lg:py-24 py-10 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 px-4 md:p-10 lg:py-24 py-10 gap-10 items-center">
             <div>
                 <img className="rounded-r-[200px]" src="https://i.ibb.co/F0bMRpQ/contact.jpg" alt="" />
             </div>
             <div>
-            <form className="card-body" data-aos="flip-right">
+            <form className="">
                     <div className="form-control">
                     <label className="label">
                         <span className="label-text">Name</span>
@@ -25,7 +25,7 @@ const ContactForm = () => {
                     <label className="label">
                         <span className="label-text">Message</span>
                     </label>
-                    <textarea name="textarea" id="" className="border" cols="30" rows="10"></textarea>
+                    <textarea name="textarea" id="" className="border" cols="30" rows="7"></textarea>
                     </div>
 
                     <div className="form-control mt-6">
