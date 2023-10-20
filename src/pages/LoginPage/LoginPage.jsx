@@ -11,7 +11,7 @@ const LoginPage = () => {
     const {signIn, googleLogin, githubLogin} = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
-    console.log(location.pathname);
+    console.log('Location in the login page', location);
 
     const loginBtn = e => {
         e.preventDefault();
@@ -27,13 +27,14 @@ const LoginPage = () => {
             .then(result => {
                 console.log(result.user);
                 toast.success('Login Successfully completed');
-                navigate('/'); // This should work if your routing is set up correctly.
+                
+                // navigate after login success
+                navigate(location?.state ? location?.state : '/')
             })
             .catch(err => {
                 console.error(err);
             });
     };
-
 
      // google sign in
      const googleSignIn = () => {

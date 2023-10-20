@@ -10,6 +10,7 @@ import SignupPage from "../pages/SignupPage/SignupPage";
 import MyCart from "../pages/My Cart/MyCart";
 import UpdateProduct from "../components/UpdateProduct/UpdateProduct";
 import Contact from "../pages/Contact/Contact";
+import PrivateRoute from "./PrivateRoute";
 
 
 const myCreatedRoute = createBrowserRouter([
@@ -33,7 +34,7 @@ const myCreatedRoute = createBrowserRouter([
         },
         {
           path: '/addProduct',
-          element: <AddProduct></AddProduct>
+          element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
         },
         {
           path: '/updateProduct/:id',
@@ -47,7 +48,7 @@ const myCreatedRoute = createBrowserRouter([
         },
         {
           path: '/myCart',
-          element: <MyCart></MyCart>,
+          element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
           loader: () => fetch('http://localhost:5000/cars')
         },
         {

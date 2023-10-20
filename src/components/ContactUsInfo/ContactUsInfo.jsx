@@ -2,7 +2,7 @@
 const ContactUsInfo = () => {
     return (
         <div className="py-20 px-2 md:px-5 lg:px-10 xl:px-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-black gap-5">
-            <div className="text-center mb-5 md:mb-14 lg:mb-0 shadow-lg flex justify-center items-center py-10 rounded-lg">
+            <div className="text-center mb-5 md:mb-14 lg:mb-0 shadow-lg flex justify-center items-center py-10 rounded-lg" data-aos="fade-up">
                 <div>
                     <div className="bg-red-500 flex justify-center items-center w-20 h-20 mx-auto rounded-full mb-5">
                         <i className='text-3xl text-white bx bx-map-alt'></i>
@@ -12,7 +12,7 @@ const ContactUsInfo = () => {
                 </div>
             </div>
             
-            <div className="text-center mb-5 md:mb-14 lg:mb-0 shadow-lg flex justify-center items-center py-10 rounded-lg">
+            <div className="text-center mb-5 md:mb-14 lg:mb-0 shadow-lg flex justify-center items-center py-10 rounded-lg" data-aos="fade-up">
                 <div>
                     <div className="bg-red-500 flex justify-center items-center w-20 h-20 mx-auto rounded-full mb-5">
                         <i className='text-3xl text-white bx bx-phone-call' ></i>
@@ -22,7 +22,7 @@ const ContactUsInfo = () => {
                 </div>
             </div>
             
-            <div className="text-center mb-5 md:mb-14 lg:mb-0 shadow-lg flex justify-center items-center py-10 rounded-lg">
+            <div className="text-center mb-5 md:mb-14 lg:mb-0 shadow-lg flex justify-center items-center py-10 rounded-lg" data-aos="fade-up">
                 <div>
                     <div className="bg-red-500 flex justify-center items-center w-20 h-20 mx-auto rounded-full mb-5">
                         <i className='text-3xl text-white bx bx-envelope'></i>
@@ -32,7 +32,7 @@ const ContactUsInfo = () => {
                 </div>
             </div>
             
-            <div className="text-center mb-5 md:mb-14 lg:mb-0 shadow-lg flex justify-center items-center py-10 rounded-lg">
+            <div className="text-center mb-5 md:mb-14 lg:mb-0 shadow-lg flex justify-center items-center py-10 rounded-lg" data-aos="fade-up">
                 <div>
                     <div className="bg-red-500 flex justify-center items-center w-20 h-20 mx-auto rounded-full mb-5">
                         <i className='text-3xl text-white bx bxs-alarm'></i>

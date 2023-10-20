@@ -23,7 +23,7 @@ const CarShow = ({car}) => {
 
     return (
         <div>
-            <div className='rounded-lg shadow-lg md:mb-10'>
+            <div className='rounded-lg shadow-lg md:mb-10' data-aos="fade-up">
                 <div className='p-4'>
                     <img className='rounded-lg' src={photo} alt="" />  
                 </div>

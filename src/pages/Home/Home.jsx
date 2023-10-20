@@ -16,7 +16,7 @@ const Home = () => {
             <Banner></Banner>
             <CarDealer></CarDealer>
             <div className="pb-20 pt-16">
-                <h1 className="font-bold text-3xl md:text-4xl lg:text-6xl mb-5 text-black text-center">
+                <h1 className="font-bold text-3xl md:text-4xl lg:text-6xl mb-5 text-black text-center" data-aos="fade-up">
                     Our Popular <span className="text-[#FF444A]">Cars</span>
                 </h1>
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 py-5 gap-5 px-2 md:px-5 lg:px-10 xl:px-20">

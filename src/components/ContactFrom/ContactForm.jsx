@@ -17,10 +17,10 @@ const ContactForm = () => {
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 px-4 md:p-10 lg:py-24 py-10 gap-10 items-center">
             <div>
-                <img className="rounded-r-[200px]" src="https://i.ibb.co/F0bMRpQ/contact.jpg" alt="" />
+                <img className="rounded-r-[200px]" src="https://i.ibb.co/F0bMRpQ/contact.jpg" alt="" data-aos="fade-right" />
             </div>
             <div>
-            <form onSubmit={handleMessage} className="">
+            <form onSubmit={handleMessage} className="" data-aos="fade-left">
                     <div className="form-control">
                     <label className="label">
                         <span className="label-text">Name</span>

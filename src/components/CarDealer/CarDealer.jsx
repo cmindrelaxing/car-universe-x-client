@@ -2,10 +2,10 @@
 const CarDealer = () => {
     return (
         <div className="px-2 md:px-5 lg:px-10 xl:px-20 md:flex md:items-center lg:gap-16 md:gap-7 py-20">
-            <div>
+            <div data-aos="fade-up">
                 <img src="https://i.ibb.co/8YSCsCC/01.png" alt="" />
             </div>
-            <div>
+            <div data-aos="fade-up">
                 <h4 className="text-lg font-semibold text-[#FF444A] tracking-widest">ABOUT US</h4>
                 <h1 className="font-bold text-3xl md:text-4xl lg:text-6xl mb-5 text-black">
                     Best Way To Find <br /> Your <span className="text-[#FF444A]">Dream</span> Car

@@ -13,7 +13,7 @@ const Banner = () => {
     return (
         <div style={hero_style} className="h-[100dvh] flex items-center">
              <div className="  py-4 px-2 md:px-5 lg:px-10 xl:px-20 z-10">
-                <div>
+                <div data-aos="fade-right">
                     <h2 className="text-[#FF444A] font-semibold uppercase mb-5">Welcome to Car Universe X</h2>
                     <h1 className="font-bold text-3xl md:text-4xl lg:text-6xl mb-5 text-white">
                         Best Way To Find <br /> Your <span className="text-[#FF444A]">Dream</span> Car
@@ -32,7 +32,7 @@ const Banner = () => {
                 </div>
             </div>
             <div className="absolute right-5 left-5 md:left-0 md:right-5 bottom-0 lg:bottom-0">
-                <img className=" md:w-[50%] lg:w-[60%] md:float-right mx-auto" src="https://i.ibb.co/2v58gRB/hero-2.png" alt="" />
+                <img className=" md:w-[50%] lg:w-[60%] md:float-right mx-auto" src="https://i.ibb.co/2v58gRB/hero-2.png" alt="" data-aos="fade-up" />
             </div>
         </div>
     );

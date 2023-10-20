@@ -12,7 +12,7 @@ const ContactUs = () => {
 
     return (
         <div style={contact_us} className="px-4 md:p-10 lg:p-24 py-10 h-[50dvh] md:h-[300px] lg:h-[400px] flex justify-center items-center">
-            <h1 className="text-center text-3xl font-semibold text-white">Contact Us</h1>
+            <h1 className="text-center text-3xl font-semibold text-white" data-aos="fade-up">Contact Us</h1>
         </div>
     );
 };
