@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 
 const MyCarInfo = ({car, cars, setCars}) => {
     // console.log(car);
-    const {_id, name, category, price, description, rating, photo} = car;
+    const {_id, name, category, price, description, rating, photo} = car || {};
 
     const handleDelete = _id => {
         console.log(_id);

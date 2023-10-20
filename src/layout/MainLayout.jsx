@@ -8,7 +8,10 @@ const MainLayout = () => {
         <div>
             <Navbar></Navbar>
             <Outlet></Outlet>
-            <Toaster/>
+            <Toaster
+            position="top-left"
+            reverseOrder={false}
+            />
             <Footer></Footer>
         </div>
     );

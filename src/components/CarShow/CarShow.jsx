@@ -1,9 +1,25 @@
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../providers/AuthProvider';
+import toast from 'react-hot-toast';
 
 const CarShow = ({car}) => {
     // console.log(car);
-    const {_id, name, category, price, rating, photo} = car;
+    const {_id, name, category, price, rating, photo} = car || {};
+
+    const {user} = useContext(AuthContext);
+    const navigate = useNavigate();
+
+    const detailsPage = () => {
+        if(user) {
+            toast.success(`Welcome to details page`);
+            navigate(`/cars/${_id}`);
+        } else {
+            toast.error(`Please login to details page`);
+            navigate('/login');
+        }
+    };
 
     return (
         <div>
@@ -28,9 +44,10 @@ const CarShow = ({car}) => {
                         <p className='text-base font-medium'>{category}</p>
                     </div>
                     <div className='flex justify-center items-center py-5'>
-                        <Link to={`/cars/${_id}`}>
-                        <button className="bg-[#FF444A] text-white py-1 font-semibold hover:bg-black hover:text-white px-8 rounded-full">Details <i className='font-semibold text-base bx bx-right-arrow-alt'></i></button>
-                        </Link>
+                    {/* <Link to={`/cars/${_id}`}>
+                    <button className="bg-[#FF444A] text-white py-1 font-semibold hover:bg-black hover:text-white px-8 rounded-full">Details <i className='font-semibold text-base bx bx-right-arrow-alt'></i></button>
+                    </Link> */}                     
+                    <button onClick={detailsPage} className="bg-[#FF444A] text-white py-1 font-semibold hover:bg-black hover:text-white px-8 rounded-full">Details <i className='font-semibold text-base bx bx-right-arrow-alt'></i></button>
                     </div>
                 </div>
             </div>
