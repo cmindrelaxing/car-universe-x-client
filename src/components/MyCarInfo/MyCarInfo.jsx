@@ -19,7 +19,7 @@ const MyCarInfo = ({car, cars, setCars}) => {
           }).then((result) => {
             if (result.isConfirmed) {
             
-                fetch(`http://localhost:5000/cars/${_id}`, {
+                fetch(`https://car-universe-x-server-jzepdghws-shakil-ahmeds-projects-043baff6.vercel.app/cars/${_id}`, {
                     method: 'DELETE',
                 })
                     .then(res => res.json())
