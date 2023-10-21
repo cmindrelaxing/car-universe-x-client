@@ -17,7 +17,7 @@ import { Link } from 'react-router-dom';
 export default function Slider() {
 
     const hero_style = {
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://i.ibb.co/yfs2RVH/slider-2.jpg')`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('https://i.ibb.co/yfs2RVH/slider-2.jpg')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -27,7 +27,7 @@ export default function Slider() {
         opacity: "10"
     };
     const hero_style1 = {
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://i.ibb.co/PCWrjtM/slider-3.jpg')`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('https://i.ibb.co/PCWrjtM/slider-3.jpg')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -37,7 +37,7 @@ export default function Slider() {
         opacity: "10"
     };
     const hero_style2 = {
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://i.ibb.co/vqJLm3n/slider-1.jpg')`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('https://i.ibb.co/vqJLm3n/slider-1.jpg')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -72,7 +72,7 @@ export default function Slider() {
                         <h1 className="font-bold text-3xl md:text-4xl lg:text-6xl mb-5 text-white">
                             Best Way To Find <br /> Your <span className="text-[#FF444A]">Dream</span> Car
                         </h1>
-                        <p className="text-sm lg:text-base text-white">
+                        <p className="text-sm lg:text-base text-white lg:pr-14">
                             There are many variations of passages orem psum available but the majority
                             have suffered alteration in some form by injected humour.
                         </p>
@@ -100,7 +100,7 @@ export default function Slider() {
                         <h1 className="font-bold text-3xl md:text-4xl lg:text-6xl mb-5 text-white">
                             Best Way To Find <br /> Your <span className="text-[#FF444A]">Dream</span> Car
                         </h1>
-                        <p className="text-sm lg:text-base text-white">
+                        <p className="text-sm lg:text-base text-white lg:pr-14">
                             There are many variations of passages orem psum available but the majority
                             have suffered alteration in some form by injected humour.
                         </p>
@@ -128,7 +128,7 @@ export default function Slider() {
                         <h1 className="font-bold text-3xl md:text-4xl lg:text-6xl mb-5 text-white">
                             Best Way To Find <br /> Your <span className="text-[#FF444A]">Dream</span> Car
                         </h1>
-                        <p className="text-sm lg:text-base text-white">
+                        <p className="text-sm lg:text-base text-white lg:pr-14">
                             There are many variations of passages orem psum available but the majority
                             have suffered alteration in some form by injected humour.
                         </p>
