@@ -60,14 +60,18 @@ const Navbar = () => {
             My Cart
             </NavLink>
 
-            <NavLink
-            to="/login"
-            className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "bg-[#FF444A] text-white py-1 px-7 rounded-tl-xl rounded-br-xl   hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-lg hover:rounded-bl-lg " : " "
+            {
+                !user ? <NavLink
+                to="/login"
+                className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "bg-[#FF444A] text-white py-1 px-7 rounded-tl-xl rounded-br-xl   hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-lg hover:rounded-bl-lg " : " "
+                }
+                >
+                Login
+                </NavLink>
+                :
+                ''
             }
-            >
-            Login
-            </NavLink>
             
         </>
 
