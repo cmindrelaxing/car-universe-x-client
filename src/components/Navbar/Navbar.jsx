@@ -78,9 +78,9 @@ const Navbar = () => {
 
     return (
 
-        <div className="navbar bg-base-100  py-4 px-2 md:px-5 lg:px-10 xl:px-20 flex justify-between ">
-            <div className="">
-                <div className="dropdown">
+        <div className="navbar bg-base-100  py-4 px-2 md:px-5 lg:px-10 xl:px-20 flex justify-between z-50">
+            <div className=" z-50">
+                <div className="dropdown  z-50">
                 <label tabIndex={0} className="btn btn-ghost lg:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                 </label>
@@ -94,14 +94,14 @@ const Navbar = () => {
 
                 <Logo></Logo>
             </div>
-            <div className="hidden lg:flex">
+            <div className="hidden lg:flex  z-50">
                 <ul className="">
                 <li className="flex justify-between items-center gap-5">
                     {navlinks}
                 </li>
                 </ul>
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center  z-50">
                 {
                     user  ? 
                     <div className="flex justify-between items-center gap-3">
