@@ -1,10 +1,10 @@
 import { useLoaderData } from "react-router-dom";
-import Banner from "../../components/Banner/Banner";
 import CarBands from "../../components/CarBands/CarBands";
 import CarBody from "../../components/CarBody/CarBody";
 import CarDealer from "../../components/CarDealer/CarDealer";
 import InfoCar from "../../components/InfoCar/InfoCar";
 import CarShow from "../../components/CarShow/CarShow";
+import Slider from "../../components/Slider/Slider";
 
 const Home = () => {
 
@@ -13,7 +13,7 @@ const Home = () => {
 
     return (
         <div>
-            <Banner></Banner>
+            <Slider></Slider>
             <CarDealer></CarDealer>
             <div className="pb-20 pt-16">
                 <h1 className="font-bold text-3xl md:text-4xl lg:text-6xl mb-5 text-black text-center" data-aos="fade-up">
