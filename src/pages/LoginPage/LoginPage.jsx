@@ -13,6 +13,18 @@ const LoginPage = () => {
     const location = useLocation();
     // console.log('Location in the login page', location);
 
+
+    const validateEmail = (email) => {
+        const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+        return emailRegex.test(email);
+    };
+
+    const validatePassword = (password) => {
+        const passwordRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}[\]:;<>,.?~\\]).{6,}$/;
+        return passwordRegex.test(password);
+    };
+
+
     const loginBtn = e => {
         e.preventDefault();
 
@@ -21,6 +33,17 @@ const LoginPage = () => {
         const password = form.password.value;
         const loginInfo = {email, password};
         console.log(loginInfo);
+
+        // Validate email and password
+        if (!validateEmail(email)) {
+            toast.error('Invalid email format', { position: 'top-left' });
+            return;
+        }
+
+        if (!validatePassword(password)) {
+            toast.error('Please use at least 6 characters, including both letters, numbers and special character for added security.)', { position: 'top-left' });
+            return;
+        }
 
         // Login with email and password
         signIn(email, password)

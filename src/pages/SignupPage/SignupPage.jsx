@@ -11,6 +11,16 @@ const SignupPage = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
+    const validateEmail = (email) => {
+        const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+        return emailRegex.test(email);
+    };
+
+    const validatePassword = (password) => {
+        const passwordRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}[\]:;<>,.?~\\]).{6,}$/;
+        return passwordRegex.test(password);
+    };
+
     const signup = e => {
         e.preventDefault();
 
@@ -20,6 +30,17 @@ const SignupPage = () => {
         const password = form.password.value;
         const signupInfo = {name, email, password};
         console.log(signupInfo);
+
+        // Validate email and password
+        if (!validateEmail(email)) {
+            toast.error('Invalid email format', { position: 'top-left' });
+            return;
+        }
+
+        if (!validatePassword(password)) {
+            toast.error('Please use at least 6 characters, including both letters, numbers and special character for added security.)', { position: 'top-left' });
+            return;
+        }
 
         // create a new account
         createUser(email, password)

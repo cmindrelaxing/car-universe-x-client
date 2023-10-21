@@ -78,14 +78,14 @@ const Navbar = () => {
             Login
             </NavLink>
 
-            <NavLink
+            {/* <NavLink
             to="/signup"
             className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "bg-[#FF444A] text-white py-1 px-7 rounded-tl-xl rounded-br-xl   hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-lg hover:rounded-bl-lg " : " "
             }
             >
             Signup
-            </NavLink>
+            </NavLink> */}
 
             
         </>
