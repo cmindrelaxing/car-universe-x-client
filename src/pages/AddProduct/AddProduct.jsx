@@ -17,7 +17,7 @@ const AddProduct = () => {
         console.log(newAddCar);
 
         // send data to the server
-        fetch('https://car-universe-x-server-jzepdghws-shakil-ahmeds-projects-043baff6.vercel.app/cars', {
+        fetch('https://car-universe-x-server-dhgxlr0vn-shakil-ahmeds-projects-043baff6.vercel.app/cars', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

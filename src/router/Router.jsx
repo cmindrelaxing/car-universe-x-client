@@ -22,7 +22,7 @@ const myCreatedRoute = createBrowserRouter([
         {
             path: '/',
             element: <Home></Home>,
-            loader: () => fetch('https://car-universe-x-server-jzepdghws-shakil-ahmeds-projects-043baff6.vercel.app/cars')
+            loader: () => fetch('https://car-universe-x-server-dhgxlr0vn-shakil-ahmeds-projects-043baff6.vercel.app/cars')
         },
         {
           path: '/about',
@@ -39,17 +39,17 @@ const myCreatedRoute = createBrowserRouter([
         {
           path: '/updateProduct/:id',
           element: <UpdateProduct></UpdateProduct>,
-          loader: ({params}) => fetch(`https://car-universe-x-server-jzepdghws-shakil-ahmeds-projects-043baff6.vercel.app/cars/${params.id}`)
+          loader: ({params}) => fetch(`https://car-universe-x-server-dhgxlr0vn-shakil-ahmeds-projects-043baff6.vercel.app/cars/${params.id}`)
         },
         {
           path: '/cars/:id',
           element: <Details></Details>,
-          loader: () => fetch(`https://car-universe-x-server-jzepdghws-shakil-ahmeds-projects-043baff6.vercel.app/cars`)
+          loader: () => fetch(`https://car-universe-x-server-dhgxlr0vn-shakil-ahmeds-projects-043baff6.vercel.app/cars`)
         },
         {
           path: '/myCart',
           element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
-          loader: () => fetch('https://car-universe-x-server-jzepdghws-shakil-ahmeds-projects-043baff6.vercel.app/cars')
+          loader: () => fetch('https://car-universe-x-server-dhgxlr0vn-shakil-ahmeds-projects-043baff6.vercel.app/cars')
         },
         {
           path: '/login',
