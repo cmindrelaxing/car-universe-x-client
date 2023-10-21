@@ -6,7 +6,7 @@ import toast from 'react-hot-toast';
 const Detail = ({details}) => {
     // console.log(details);
 
-    const {name, category, price, description, rating, photo} = details || {};
+    const {name, brand, price, description, rating, photo} = details || {};
     
     const {user} = useContext(AuthContext);
 
@@ -34,7 +34,7 @@ const Detail = ({details}) => {
                         <span className='text-lg font-semibold text-[#FF444A]'>{rating}</span>
                     </div>
                     <p className='text-lg font-semibold text-[#FF444A]'>${price}</p>
-                    <p className='text-base font-medium'>{category}</p>
+                    <p className='text-base font-medium'>{brand}</p>
                     <p className='py-5'><small>{description}</small></p>
                     <button onClick={handleConfirmation} className="bg-[#FF444A] mt-5 text-white py-1 font-semibold hover:bg-black hover:text-white px-8 rounded-full">Order Now</button>
                 </div>

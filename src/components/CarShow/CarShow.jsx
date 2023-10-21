@@ -6,7 +6,7 @@ import toast from 'react-hot-toast';
 
 const CarShow = ({car}) => {
     // console.log(car);
-    const {_id, name, category, price, rating, photo} = car || {};
+    const {_id, name, brand, price, rating, photo} = car || {};
 
     const {user} = useContext(AuthContext);
     const navigate = useNavigate();
@@ -41,7 +41,7 @@ const CarShow = ({car}) => {
                     </div>
                     <div className='flex justify-between items-center'>
                         <p className='text-lg font-semibold text-[#FF444A]'>${price}</p>
-                        <p className='text-base font-medium'>{category}</p>
+                        <p className='text-base font-medium'>{brand}</p>
                     </div>
                     <div className='flex justify-center items-center py-5'>
                     {/* <Link to={`/cars/${_id}`}>

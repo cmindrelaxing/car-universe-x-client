@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 
 const MyCarInfo = ({car, cars, setCars}) => {
     // console.log(car);
-    const {_id, name, category, price, description, rating, photo} = car || {};
+    const {_id, name, brand, price, description, rating, photo} = car || {};
 
     const handleDelete = _id => {
         console.log(_id);
@@ -59,7 +59,7 @@ const MyCarInfo = ({car, cars, setCars}) => {
                     </div>
                     <div className='flex justify-between items-center'>
                         <p className='text-lg font-semibold text-[#FF444A]'>${price}</p>
-                        <p className='text-base font-medium'>{category}</p>
+                        <p className='text-base font-medium'>{brand}</p>
                     </div>
                     <p><small>{description}</small></p>
 

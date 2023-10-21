@@ -8,12 +8,12 @@ const AddProduct = () => {
         e.preventDefault();
         const form = e.target;
         const name = form.name.value;
-        const category = form.category.value;
+        const brand = form.brand.value;
         const price = form.price.value;
         const description = form.description.value;
         const rating = form.rating.value;
         const photo = form.photo.value;
-        const newAddCar = {name, category, price, description, rating, photo};
+        const newAddCar = {name, brand, price, description, rating, photo};
         console.log(newAddCar);
 
         // send data to the server
@@ -43,7 +43,7 @@ const AddProduct = () => {
         <div className="bg-[#F4F3F0] px-4 md:p-10 lg:p-24 py-10 ">
             <h2 className=" text-base md:text-3xl font-extrabold mb-5" data-aos="fade-up">Add a New Car</h2>
             <form onSubmit={handleAddCar}>
-                {/* form Car Name and Category row */}
+                {/* form Car Name and brand row */}
                 <div className="md:flex gap-5 mb-8" data-aos="fade-up">
                     <div className="form-control md:w-1/2 mb-4 md:mb-0">
                         <label className="label">
@@ -55,10 +55,10 @@ const AddProduct = () => {
                     </div>
                     <div className="form-control md:w-1/2">
                         <label className="label">
-                            <span className="label-text">Category</span>
+                            <span className="label-text">Brand</span>
                         </label>
                         <label className="">
-                            <input type="text" name="category" placeholder="Enter Car category" className="input  w-full rounded-lg" />
+                            <input type="text" name="brand" placeholder="Enter Car brand" className="input  w-full rounded-lg" />
                         </label>
                     </div>
                 </div>
